@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OJT Blogsite</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome (for social media icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <span class="menu-btn" onclick="toggleDrawer()">&#9776;</span>
+    <h1>My OJT Blogsite</h1>
+    <img src="tesda-logo.png" alt="TESDA Logo" class="logo">
+  </header>
+
+  <!-- NAVIGATION DRAWER -->
+  <nav id="drawer" class="drawer">
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+    <a href="#" onclick="showSection('about')">About Me</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HOME (Weekly Journal grouped together) -->
+    <section id="home" class="content-section">
+      <h2>My OJT Journey</h2>
+
+      <div class="week-section">
+        <h2>Week 1</h2>
+        <img src="week 1.jpg" alt="Week 1" class="week-photo">
+        <p>My first week in OJT was full of learning and adjustment...</p>
+      </div>
+
+      <div class="week-section">
+        <h2>Week 2</h2>
+        <img src="week 2.jpg" alt="Week 2" class="week-photo">
+        <p>On my second week, I became more familiar with the tasks...</p>
+      </div>
+
+      <div class="week-section">
+        <h2>Week 3</h2>
+        <img src="week 3.jpg" alt="Week 3" class="week-photo">
+        <p>Week three was more challenging but also rewarding...</p>
+      </div>
+
+      <div class="week-section">
+        <h2>Week 4</h2>
+        <img src="week 4.jpg" alt="Week 4" class="week-photo">
+        <p>During my fourth week, I improved my skills and gained more confidence...</p>
+      </div>
+
+      <div class="week-section">
+        <h2>Graduation</h2>
+        <img src="week 5.jpg" alt="Graduation" class="week-photo">
+        <p>Our OJT journey ended with a memorable graduation day...</p>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="content-section hidden">
+      <h2>Portfolio</h2>
+
+      <!-- Personal Data -->
+      <div class="card">
+        <h3>Personal Data</h3>
+        <p><strong>Name:</strong> Rey Jhon Lloyd E. Mantilla</p>
+        <p><strong>Course:</strong> Bachelor of Science in Computer Science</p>
+        <p><strong>Year & Section:</strong> 3rd Year / BLOCK E</p>
+        <p><strong>Student ID No.:</strong> 22-00930</p>
+        <p><strong>Address:</strong> Purok-1 Lactudan, Cagwait SDS.</p>
+        <p><strong>Age:</strong> 21</p>
+        <p><strong>Sex:</strong> Male</p>
+        <p><strong>Date of Birth:</strong> April 8, 2004</p>
+        <p><strong>Guardian:</strong> Alma E. Mantilla</p>
+      </div>
+
+      <!-- Journal Summary -->
+      <div class="card">
+        <h3>Journal Summary</h3>
+        <p>
+          My On-the-Job Training (OJT) at TESDA was a meaningful experience that allowed 
+          me to apply my academic knowledge in real workplace settings. I was mainly 
+          assigned in handling CACs documents where I was responsible for organizing, 
+          filing, and assisting in the processing of important records. This task helped 
+          me develop a sense of accuracy, patience, and responsibility.
+        </p>
+        <p>
+          Aside from document-related tasks, I was also able to observe and support 
+          office operations, communicate with staff, and assist in day-to-day activities. 
+          These experiences improved my communication skills, teamwork, and adaptability 
+          in a professional environment.
+        </p>
+        <p>
+          Overall, the OJT allowed me to grow both personally and professionally. 
+          I learned the importance of discipline, efficiency, and collaboration. 
+          Most importantly, it boosted my confidence in preparing for my future career 
+          in the IT field and gave me a better understanding of what it is like 
+          to be part of a professional workforce.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Certificate</h3>
+        <img src="certificate.jpg" alt="OJT Certificate" class="week-photo">
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about" class="content-section hidden">
+      <h2>About Me</h2>
+      <img src="aboutme.jpg" alt="About Me Picture" class="about-pic">
+      <p>Hello! I am Rey Jhon Lloyd E. Mantilla, a BS Computer Science student. 
+      I created this blogsite to document my On-the-Job Training journey with TESDA. 
+      This experience helped me enhance my skills, gain confidence, and prepare myself 
+      for my future career in the IT industry.</p>
+
+      <!-- Social Media Links -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1ACmcQg4X3/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="jhonlloydmantilla@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SCRIPT -->
+  <script>
+    function toggleDrawer() {
+      document.getElementById("drawer").classList.toggle("open");
+    }
+
+    function showSection(sectionId) {
+      let sections = document.querySelectorAll(".content-section");
+      sections.forEach(sec => sec.classList.add("hidden"));
+      document.getElementById(sectionId).classList.remove("hidden");
+      toggleDrawer(); // close drawer after click
+    }
+  </script>
+</body>
+</html>
